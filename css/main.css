@@ -24,10 +24,6 @@ body {
   margin: auto;
 }
 
-#clientes {
-
-}
-
 #content {
   background-color: #EFEFEF;
   height: 18em;
@@ -40,6 +36,29 @@ body {
 h1, h2, h3 {
   margin: 0;
   font-size: 1em; 
+}
+
+hgroup {
+  font-size: 0.8em;
+  text-align: left;
+  width: 54em;
+  margin: 1.5em auto 2.5em;
+}
+
+hgroup a {
+  color: #4F4F4F;
+  text-decoration: none;  
+  padding: 0.5em 0.1em;
+}
+
+hgroup a:hover {
+  background-color: #EFEFEF;
+}
+
+hgroup h2 {
+  font-weight: normal;
+  display: inline-block;
+  margin: auto 0.5em;
 }
 
 header{
@@ -90,6 +109,11 @@ nav li{
   display: inline-block;
 }
 
+nav li h1{
+  display: inline-block;
+  font-weight: normal;
+}
+
 nav ul{
   padding: 0 0 0 0.7em;
 }
@@ -109,6 +133,10 @@ p {
   margin: 2em auto;
 }
 
+.text_project {
+  display: none;
+}
+
 #texto{
   height: 0;
   opacity: 0;
@@ -118,12 +146,16 @@ p {
 }
 
 .t_top {
-  margin: 1.5em auto 2em;
+  margin: 1em auto 2em;
 }
 
 .selected {
   background-color: #EFEFEF;
   color: #F45D11;
+}
+
+.showing {
+  display: block;
 }
 
 #video{
