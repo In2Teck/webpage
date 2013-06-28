@@ -24,6 +24,20 @@ body {
   margin: auto;
 }
 
+.bottom_text {
+  height: 3.5em;
+}
+
+.client_logo {
+  height: 50px;
+}
+/*
+.client_text {
+  display: inline-block;
+  height: 30px;
+  vertical-align: middle;
+}*/
+
 #content {
   background-color: #EFEFEF;
   height: 18em;
@@ -31,6 +45,10 @@ body {
   width: 41em;
   padding: 1em;
   transition: margin 0.6s ease;
+}
+
+.details {
+  display: none;
 }
 
 h1, h2, h3 {
@@ -76,6 +94,11 @@ header{
   margin: auto;
 }
 
+#header_right {
+  display: inline-block;
+  margin: 0 1em 0 10em;
+}
+
 #in2teck_main {
   background: url('../img/logo.png') no-repeat 100% center;
   background-size: 250px 96px;
@@ -85,9 +108,19 @@ header{
   width: 250px;
 }
 
-#header_right {
-  display: inline-block;
-  margin: 0 1em 0 10em;
+.info {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+.info a {
+  color: #4F4F4F;
+  text-decoration: none;  
+  padding: 0.5em;
+}
+
+.info a:hover {
+  background-color: #FAFAFA;
 }
 
 nav {
@@ -158,6 +191,15 @@ p {
   display: block;
 }
 
+.showcase {
+  text-align: center;
+}
+
+.showcase_img {
+  height: 10em;
+  margin: 0.5em 1em;
+}
+
 #video{
   height: 0;
   transition: opacity 0.6s ease;
@@ -182,7 +224,7 @@ p {
   header {
     position: fixed;
     top:-0.5em;
-    height: 9em;
+    height: 10em;
     background: inherit;
   }
   
@@ -234,7 +276,7 @@ p {
   }
 
   section {
-    margin-top: 9em;
+    margin-top: 10em;
   }
 
   .t_bottom, .t_top {

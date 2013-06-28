@@ -4,18 +4,47 @@ function init(){
 
   $("body").css("display", "none");
   $("body").fadeIn(400);
+  $("#texto_calchupadora").fadeIn(400);
 
   $("#quienes_somos").on("click", redirectQuienes);
   $("#in2teck_main").on("click", redirectHome);
   $("#contacto").on("click", redirectContacto);
   $(".project").on("click", seleccionaMenu);
+  $(".verdetalles").on("click", verDetalles)
+  
+  $(".yoxview").yoxview({
+    playDelay: 3000
+  });
+}
+
+function verDetalles(event){
+  $("#"+event.currentTarget.id).fadeOut(300);
+  if ( $("#"+event.currentTarget.id).data("detalles") ) {
+    $("#details"+event.currentTarget.id).fadeOut(300);
+    setTimeout(function(){
+      $("#showcase"+event.currentTarget.id).fadeIn(300);
+      $("#"+event.currentTarget.id).html("Ver detalles");
+      $("#"+event.currentTarget.id).fadeIn(300);
+    }, 300);
+    $("#"+event.currentTarget.id).data("detalles", false)
+  } else {
+    $("#showcase"+event.currentTarget.id).fadeOut(300);
+    setTimeout(function(){
+      $("#details"+event.currentTarget.id).fadeIn(300);
+      $("#"+event.currentTarget.id).html("Ver imágenes");
+      $("#"+event.currentTarget.id).fadeIn(300);
+    }, 300);
+    $("#"+event.currentTarget.id).data("detalles", true)
+  }
 }
 
 function seleccionaMenu(event) {
+  $(".text_project").fadeOut(300);      
   $(".project").removeClass("selected");
-  $(".text_project").removeClass("showing");
   $("#"+event.currentTarget.id).addClass("selected");
-  $("#texto_"+event.currentTarget.id).addClass("showing");
+  setTimeout(function(){
+    $("#texto_"+event.currentTarget.id).fadeIn(300);
+  }, 300);
 }
 
 function redirectHome() {
