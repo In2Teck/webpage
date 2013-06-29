@@ -24,10 +24,6 @@ body {
   margin: auto;
 }
 
-.bottom_text {
-  height: 3.5em;
-}
-
 .client_logo {
   height: 50px;
 }
@@ -42,9 +38,10 @@ body {
   background-color: #EFEFEF;
   height: 18em;
   margin: 0 auto;
-  width: 41em;
   padding: 1em;
+  position: relative;
   transition: margin 0.6s ease;
+  width: 41em;
 }
 
 .details {
@@ -109,7 +106,12 @@ header{
 }
 
 .info {
+  bottom: 0;
   font-size: 0.8em;
+  left: 0;
+  margin-bottom: 1em;
+  position: absolute;
+  right: 0;
   text-align: center;
 }
 
@@ -155,6 +157,24 @@ p {
   margin: 0;
 }
 
+.selected {
+  background-color: #EFEFEF;
+  color: #F45D11;
+}
+
+.showing {
+  display: block;
+}
+
+.showcase {
+  text-align: center;
+}
+
+.showcase_img {
+  height: 10em;
+  margin: 0.5em 1em;
+}
+
 .tagline {
   font-weight: bold;
   opacity: 1;
@@ -182,24 +202,6 @@ p {
   margin: 1em auto 2em;
 }
 
-.selected {
-  background-color: #EFEFEF;
-  color: #F45D11;
-}
-
-.showing {
-  display: block;
-}
-
-.showcase {
-  text-align: center;
-}
-
-.showcase_img {
-  height: 10em;
-  margin: 0.5em 1em;
-}
-
 #video{
   height: 0;
   transition: opacity 0.6s ease;
@@ -219,6 +221,7 @@ p {
   #content {
     width: 80%;
     height: 13em;
+    position: static;
   }
 
   header {
@@ -229,7 +232,6 @@ p {
   }
   
   #header_left {
-    //margin-top: 12em;
     position: relative;
     top: 5.5em;
     width: 100%;
@@ -261,6 +263,10 @@ p {
     background: url('../img/logo_min.png') no-repeat 20% center;
     background-size: 180px 60px;
     margin: 1em 0;
+  }
+
+  .info {
+    position: static;
   }
 
   nav {

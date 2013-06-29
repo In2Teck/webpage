@@ -1,4 +1,4 @@
-$(document).on("ready", init);
+$(document).ready(init);
 
 function init(){
 
@@ -6,15 +6,13 @@ function init(){
   $("body").fadeIn(400);
   $("#texto_calchupadora").fadeIn(400);
 
-  $("#quienes_somos").on("click", redirectQuienes);
-  $("#in2teck_main").on("click", redirectHome);
-  $("#contacto").on("click", redirectContacto);
-  $(".project").on("click", seleccionaMenu);
-  $(".verdetalles").on("click", verDetalles)
+  $("#quienes_somos").click(redirectQuienes);
+  $("#in2teck_main").click(redirectHome);
+  $("#contacto").click(redirectContacto);
+  $(".project").click(seleccionaMenu);
+  $(".verdetalles").click(verDetalles);
   
-  $(".yoxview").yoxview({
-    playDelay: 3000
-  });
+  $(".yoxview").yoxview();
 }
 
 function verDetalles(event){

@@ -1,4 +1,4 @@
-$(document).on("ready", init);
+$(document).ready(init);
 
 var stretch = { }
 
@@ -76,10 +76,10 @@ function init(){
   });
   $(window).resize();
 
-  $("#quienes_somos").on("click", muestraTexto);
-  $("#in2teck_main").on("click", muestraVideo);
-  $("#apps_hacks").on("click", redirectApps);
-  $("#contacto").on("click", redirectContacto);
+  $("#quienes_somos").click(muestraTexto);
+  $("#in2teck_main").click(muestraVideo);
+  $("#apps_hacks").click(redirectApps);
+  $("#contacto").click(redirectContacto);
 
   if(location.search.contains("fi")){
     $("body").css("display", "none");
