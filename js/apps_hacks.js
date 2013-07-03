@@ -12,6 +12,7 @@ function init(){
   $(".project").click(seleccionaMenu);
   $(".verdetalles").click(verDetalles);
   
+  $("#slider-code").tinycarousel({ pager: true });
   $(".yoxview").yoxview();
 }
 

@@ -4,14 +4,16 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>Apps & Hacks</title>
-    <meta name="description" content="Nuestras apps y casos de éxito." />
+    <meta name="description" content="Apps y casos de éxito web y móviles." />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/apps_hacks.css">
     <script src="js/jquery.min.js"></script>
 	  <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script src="js/yoxview/yoxview-init.js"></script>
+    <script src="js/jquery.tinycarousel.min.js"></script>
+    <script src="js/util.js"></script>
     <script src="js/apps_hacks.js"></script>
   <head>
     <body>
@@ -37,17 +39,25 @@
             </ul>
           </aside>
         </div>
+        <hgroup>
+          <div id="slider-code">
+            <a class="buttons prev" href="#" class="slide_left"><</a>
+            <div class="viewport">
+              <ul class="overview">
+                <li><a href="#" class="selected project" id="calchupadora"><h2>Calchupadora</h2></a></li>
+                <li><a href="#" class="project" id="cetesdirecto"><h2>CETESDirecto</h2></a></li>
+                <li><a href="#" class="project" id="gdltradicional"><h2>GDL Tradicional</h2></a></li>
+                <li><a href="#" class="project" id="chutapoints"><h2>Chutapoints</h2></a></li>
+                <li><a href="#" class="project" id="iee"><h2>I.E.E.</h2></a></li>
+                <li><a href="#" class="project" id="massexys"><h2>Más Sexys</h2></a></li>
+                <li><a href="#" class="project" id="conciertocentenario"><h2>Concierto Centenario</h2></a></li>
+              </ul>
+            </div>
+            <a class="buttons next" href="#" class="slide_right">></a> 
+          </div>   
+        </hgroup>
       </header>
       <section>
-        <hgroup>
-          <a href="#" class="selected project" id="calchupadora"><h2>Calchupadora</h2></a>
-          <a href="#" class="project" id="cetesdirecto"><h2>CETESDirecto</h2></a>
-          <a href="#" class="project" id="gdltradicional"><h2>GDL Tradicional</h2></a>
-          <a href="#" class="project" id="chutapoints"><h2>Chutapoints</h2></a>
-          <a href="#" class="project" id="iee"><h2>I.E.E.</h2></a>
-          <a href="#" class="project" id="massexys"><h2>Más Sexys</h2></a>
-          <a href="#" class="project" id="conciertocentenario"><h2>Concierto Centenario</h2></a>
-        </hgroup>
         <div id="content">
           <div id="texto_calchupadora" class="text_project">
             <div id="showcase_calchupadora" class="showcase">
@@ -57,7 +67,7 @@
                 <a href="img/apps/calchupadora/calchupadora03.jpg"/><img src="img/apps/calchupadora/calchupadora_t03.jpg" alt="mapa" title="Mapa" class="showcase_img"/></a>
                 <a href="img/apps/calchupadora/calchupadora04.jpg"/><img src="img/apps/calchupadora/calchupadora_t04.jpg" alt="recetario" title="Recetario" class="showcase_img"/></a>
               </div><br/>        
-              <a href="http://www.t2omedia.com.mx" target="_blank"><img src="img/clientes/t2omedia.png" class="client_logo" /></a><br/><br/>
+              <a href="http://www.t2omedia.com.mx" target="_blank"><img src="img/clientes/t2omedia.png" class="client_logo" alt="t2omedia" /></a><br/><br/>
             </div>
             <div id="details_calchupadora" class="details">
               <h3>Descripción</h3></br>
@@ -66,29 +76,103 @@
               <p>Incursionar en el mercado móvil a través de una herramienta divertida y oficial de José Cuervo Especial para promover la marca entre los jóvenes.</p><br/>
               <h3>Resultados</h3>
               <ul>
-                <li>Más de 60 mil descargas</li>
-                <li>Top 80 en la App Store por dos semanas seguidas</li>
+                <li>Más de 80,000 descargas</li>
+                <li>Top 18 en la App Store por dos semanas seguidas</li>
               </ul>
             </div>
             <p class="info"><a href="#" id="_calchupadora" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
           <div id="texto_cetesdirecto" class="text_project">
-            <p>Texto cetesdirecto</p>
+            <div id="showcase_cetesdirecto" class="showcase">
+              <div class="yoxview">
+                <a href="img/apps/cetesdirecto/cetesdirecto01.jpg"/><img src="img/apps/cetesdirecto/cetesdirecto_t01.jpg" alt="Stand" title="Stand" class="showcase_img"/></a>
+                <a href="img/apps/cetesdirecto/cetesdirecto04.jpg"/><img src="img/apps/cetesdirecto/cetesdirecto_t04.jpg" alt="Aplicación" title="Aplicación" class="showcase_img"/></a>
+              </div><br/>        
+              <a href="http://www.mide.org.mx" target="_blank"><img src="img/clientes/mide.png" class="client_logo" alt="mide" /></a><br/><br/>
+            </div>
+            <div id="details_cetesdirecto" class="details">
+              <h3>Descripción</h3></br>
+              <p>Programa educativo e interactivo que permite simular inversiones en instrumentos financieros.</p><br/>
+              <h3>Objetivo</h3></br>
+              <p>Ayudar a las personas a que sepan como invertir mejor su dinero a través de <a href="http://www.cetesdirectovideos.com/video/Simulador/WEB/MIDEFlex.html" target="_blank">cetesdirecto</a>.</p><br/>
+              <h3>Resultados</h3>
+              <ul>
+                <li>Tres años de operación continua</li>
+                <li>Más de 100,000 usuarios totales</li>
+              </ul>
+            </div>
+            <p class="info"><a href="#" id="_cetesdirecto" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
           <div id="texto_gdltradicional" class="text_project">
-            <p>Texto gdltradicional</p>
+            <div id="showcase_gdltradicional" class="showcase">
+              <div class="yoxview">
+                <a href="img/apps/gdltradicional/gdltradicional01.jpg"/><img src="img/apps/gdltradicional/gdltradicional_t01.jpg" alt="Portada" title="Portada" class="showcase_img"/></a>
+                <a href="img/apps/gdltradicional/gdltradicional02.jpg"/><img src="img/apps/gdltradicional/gdltradicional_t02.jpg" alt="Galería" title="Galería" class="showcase_img"/></a>
+                <a href="img/apps/gdltradicional/gdltradicional03.jpg"/><img src="img/apps/gdltradicional/gdltradicional_t03.jpg" alt="Foto" title="Foto" class="showcase_img"/></a>
+              </div><br/>        
+              <a href="http://www.t2omedia.com.mx" target="_blank"><img src="img/clientes/t2omedia.png" class="client_logo" alt="t2omedia" /></a><br/><br/>
+            </div>
+            <div id="details_gdltradicional" class="details">
+              <h3>Descripción</h3></br>
+              <p>Plataforma para compartir y votar sobre fotos temáticas.</p><br/>
+              <h3>Objetivo</h3></br>
+              <p>Reforzar a la marca Tradicional en la ciudad de Guadalajara mediante un tributo a la misma.</p><br/>
+              <h3>Resultados</h3>
+              <ul>
+                <li>Más de 3,000 fotos compartidas</li>
+                <li>Premio bronce de <a href="http://www.iabmexico.com/ganadores/final.html" target="_blank">IAB Conecta 2013</a> por la campaña #GDLESTRADICIONAL</li>
+              </ul>
+            </div>
+            <p class="info"><a href="#" id="_gdltradicional" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
           <div id="texto_chutapoints" class="text_project">
-            <p>Texto chutapoints</p>
+            <div id="showcase_chutapoints" class="showcase">
+              <div class="yoxview">
+                <a href="img/apps/chutapoints/chutapoints01.jpg"/><img src="img/apps/chutapoints/chutapoints_t01.jpg" alt="Jornada" title="Jornada" class="showcase_img"/></a>
+                <a href="img/apps/chutapoints/chutapoints02.jpg"/><img src="img/apps/chutapoints/chutapoints_t02.jpg" alt="Facebook credits" title="FB credits" class="showcase_img"/></a>
+              </div><br/>        
+              <a href="http://msn.mediotiempo.com/" target="_blank"><img src="img/clientes/mediotiempo.png" class="client_logo" alt="mediotiempo"/></a><br/><br/>
+            </div>
+            <div id="details_chutapoints" class="details">
+              <h3>Descripción</h3></br>
+              <p>Quiniela de futbol sobre el toreno de apertura 2011.</p><br/>
+              <h3>Objetivo</h3></br>
+              <p>Reforzar la alianza de MedioTiempo con sus patrocinadores e innovar con juegos interactivos sobre plataformas sociales.</p><br/>
+              <h3>Resultados</h3>
+              <ul>
+                <li>Más de 25,000 usuarios activos</li>
+                <li>15,000 visitas diarias promedio durante tres meses</li>
+                <li>$ 2,000 USD de ventas a través de Facebook Credits</li>
+              </ul>
+            </div>
+            <p class="info"><a href="#" id="_chutapoints" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
           <div id="texto_iee" class="text_project">
-            <p>Texto iee</p>
+            <div id="showcase_iee" class="showcase">
+              <div class="yoxview">
+                <a href="img/apps/iee/iee01.jpg"/><img src="img/apps/iee/iee_t01.jpg" alt="Votación" title="Votación" class="showcase_img"/></a>
+                <a href="img/apps/iee/iee02.jpg"/><img src="img/apps/iee/iee_t02.jpg" alt="Credencial" title="Credencial" class="showcase_img"/></a>
+              </div><br/>        
+              <a href="http://www.t2omedia.com.mx" target="_blank"><img src="img/clientes/t2omedia.png" class="client_logo" alt="t2omedia" /></a><br/><br/>
+            </div>
+            <div id="details_iee" class="details">
+              <h3>Descripción</h3></br>
+              <p>Generador de credenciales y dinámica de votación para seleccionar la mezcla más popular con tequila.</p><br/>
+              <h3>Objetivo</h3></br>
+              <p>Llevar la campaña Maroma Electoral a las redes sociales para extender su alcance y penetración en el mercado.</p><br/>
+              <h3>Resultados</h3>
+              <ul>
+                <li>Más de 7,000 credenciales y votos emitidos</li>
+                <li>Premio bronce de <a href="http://www.iabmexico.com/ganadores/final.html" target="_blank">IAB Conecta 2013</a> por la herramienta Maroma Electoral</li>
+              </ul>
+            </div>
+            <p class="info"><a href="#" id="_iee" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
           <div id="texto_massexys" class="text_project">
             <div id="showcase_massexys" class="showcase">
               <div class="yoxview">
-                <a href="img/apps/sexys/sexys01.jpg"/><img src="img/apps/sexys/sexys_t01.jpg" alt="sexys 1" title="Sexys" class="showcase_img"/></a>
-                <a href="img/apps/sexys/sexys02.jpg"/><img src="img/apps/sexys/sexys_t02.jpg" alt="sexys 2" title="Sexys" class="showcase_img"/></a>
+                <a href="img/apps/sexys/sexys01.jpg"/><img src="img/apps/sexys/sexys_t01.jpg" alt="sexys 1" title="Concurso" alt="concurso" class="showcase_img"/></a>
+                <a href="img/apps/sexys/sexys02.jpg"/><img src="img/apps/sexys/sexys_t02.jpg" alt="sexys 2" title="Comentarios" alt="comentarios" class="showcase_img"/></a>
               </div><br/>        
               <a href="http://www.chilango.com" target="_blank"><img src="img/clientes/chilango.png" class="client_logo" /></a><br/><br/>
             </div>
@@ -99,14 +183,33 @@
               <p>Construir la comunidad de Chilango en Facebook, la cual era inexistente.</p><br/>
               <h3>Resultados</h3>
               <ul>
-                <li>Crecimiento de 50% en seguidores (de 12 mil a 18 mil)</li>
-                <li>Más de 12 mil visitas nuevas</li>
+                <li>Crecimiento de 50% en seguidores</li>
+                <li>Más de 12,000 visitas nuevas</li>
               </ul>
             </div>
             <p class="info"><a href="#" id="_massexys" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div> 
           <div id="texto_conciertocentenario" class="text_project">
-            <p>Texto conciertocentenario</p>
+            <div id="showcase_conciertocentenario" class="showcase">
+              <div class="yoxview">
+                <a href="img/apps/conciertocentenario/conciertocentenario01.jpg"/><img src="img/apps/conciertocentenario/conciertocentenario_t01.jpg" alt="Mapa" title="Mapa" class="showcase_img"/></a>
+                <a href="img/apps/conciertocentenario/conciertocentenario02.jpg"/><img src="img/apps/conciertocentenario/conciertocentenario_t02.jpg" alt="Invita amigos" title="Invita amigos" class="showcase_img"/></a>
+                <a href="img/apps/conciertocentenario/conciertocentenario03.jpg"/><img src="img/apps/conciertocentenario/conciertocentenario_t03.jpg" alt="Versión móvil" title="Versión móvil" class="showcase_img"/></a>
+              </div><br/>        
+              <a href="http://www.t2omedia.com.mx" target="_blank"><img src="img/clientes/t2omedia.png" class="client_logo" alt="t2omedia" /></a><br/><br/>
+            </div>
+            <div id="details_conciertocentenario" class="details">
+              <h3>Descripción</h3></br>
+              <p>Plataforma de concursos web y móviles para entregar boletos del concierto patrocinado por Tequila Centenario (FUN + Martin Solveig).</p><br/>
+              <h3>Objetivo</h3></br>
+              <p>Interactuar con la comunidad de Tequila Centenario en tiempo real por medio de dinámicas geolocalizadas.</p><br/>
+              <h3>Resultados</h3>
+              <ul>
+                <li>Más de 6,000 concursantes</li>
+                <li>106 boletos asignados en tiempo real</li>
+              </ul>
+            </div>
+            <p class="info"><a href="#" id="_conciertocentenario" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
         </div>
       </section>

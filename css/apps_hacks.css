@@ -38,6 +38,10 @@ body {
   width: 41em;
 }
 
+.details {
+  display: none;
+}
+
 h1, h2, h3 {
   margin: 0;
   font-size: 1em; 
@@ -47,7 +51,7 @@ hgroup {
   font-size: 0.8em;
   text-align: left;
   width: 54em;
-  margin: 1.5em auto 2.5em;
+  margin: 1em auto 2em;
 }
 
 hgroup a {
@@ -95,6 +99,26 @@ header{
   width: 250px;
 }
 
+.info {
+  bottom: 0;
+  font-size: 0.8em;
+  left: 0;
+  margin-bottom: 1em;
+  position: absolute;
+  right: 0;
+  text-align: center;
+}
+
+.info a {
+  color: #4F4F4F;
+  text-decoration: none;  
+  padding: 0.5em;
+}
+
+.info a:hover {
+  background-color: #FAFAFA;
+}
+
 nav {
   text-align: right;
   width: 100%;
@@ -132,6 +156,23 @@ p {
   color: #F45D11;
 }
 
+.showcase {
+  text-align: center;
+}
+
+.showcase_img {
+  height: 10em;
+  margin: 0.5em 1em;
+}
+
+#slider-code { height: 2em; overflow:hidden; }
+#slider-code .viewport {display: inline-block; width: 97%; height: 2em; overflow: hidden; position: relative; }
+#slider-code .buttons { display: inline-block; margin: 0 1em 0 -2em; position: absolute; }
+#slider-code .next { float: right; margin: 0 0 0 2em; position: absolute; }
+#slider-code .disable { visibility: hidden; }
+#slider-code .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
+#slider-code .overview li{ float: left; margin: 0.3em 0.1em 0; height: 2em;  width: auto;}
+
 .tagline {
   font-weight: bold;
   opacity: 1;
@@ -139,26 +180,8 @@ p {
   transition: all 0.6s ease;
 }
 
-.t_bottom {
-  margin: 2em auto;
-}
-
-#texto{
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.6s ease;
-  width: 0;
-}
-
-.t_top {
-  margin: 1em auto 2em;
-}
-
-#video{
-  height: 0;
-  transition: opacity 0.6s ease;
-  width: 0;
+.text_project {
+  display: none;
 }
 
 @media screen and (max-width:730px) {
@@ -169,18 +192,19 @@ p {
 
   #blank_bottom {
     display: block;
+    height: 7em;
   }
 
   #content {
     width: 80%;
-    height: 13em;
+    height: auto;
     position: static;
   }
 
   header {
     position: fixed;
     top:-0.5em;
-    height: 10em;
+    height: 12.5em;
     background: inherit;
   }
   
@@ -212,10 +236,24 @@ p {
     margin-top: 3em;
   }
 
+  hgroup{
+    margin: 7em auto 2.5em;
+    width: 85%;
+  }
+
+  hgroup h2 {
+    margin: 0.7em 0.5em;
+  }
+
   #in2teck_main {
     background: url('../img/logo_min.png') no-repeat 20% center;
     background-size: 180px 60px;
     margin: 1em 0;
+  }
+
+  .info {
+    margin-bottom: -0.5em;
+    position: relative;
   }
 
   nav {
@@ -231,11 +269,7 @@ p {
   }
 
   section {
-    margin-top: 10em;
-  }
-
-  .t_bottom, .t_top {
-    margin: 1.5em auto;
+    margin-top: 12em;
   }
 
   ul {

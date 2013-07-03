@@ -4,16 +4,8 @@ var stretch = { }
 
 var unstretch = { }
 
-var delay = (function(){
-    var timer = 0;
-    return function(callback, ms){
-        clearTimeout (timer);
-        timer = setTimeout(callback, ms);
-    };
-})();
-
 function muestraTexto() {
-  $("#blank_bottom").css("height", "8em");
+  $("#blank_bottom").css("height", "7em");
   $(".tagline").css("opacity", 0);
   $("#video").css({opacity: 0, height: "0", width: "0"});
   $("#texto").css({opacity: 1, height: "auto", width: "auto"});
@@ -81,12 +73,12 @@ function init(){
   $("#apps_hacks").click(redirectApps);
   $("#contacto").click(redirectContacto);
 
-  if(location.search.contains("fi")){
+  if(location.search.indexOf("fi") > -1){
     $("body").css("display", "none");
     $("body").fadeIn(400);
   }
 
-  if(location.search.contains("quienes")){
+  if(location.search.indexOf("quienes") > -1){
     $("body").css("display", "none");
     $("body").fadeIn(400, muestraTexto);
   }
