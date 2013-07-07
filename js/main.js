@@ -24,24 +24,9 @@ function muestraVideo() {
   $("#content").css(unstretch);
 }
 
-function redirectApps() {
-  $("body").fadeOut(400, function(){
-    redirectPage("apps_hacks.html");        
-  });  
-}
-
-function redirectContacto() {
-
-}
-
-function redirectPage(page){
-  window.location = page;
-}
-
 function init(){
 
   var pause = 100; 
-
   $(window).resize(function() {
       delay(function() {
           var width = $(window).width();
@@ -70,16 +55,18 @@ function init(){
 
   $("#quienes_somos").click(muestraTexto);
   $("#in2teck_main").click(muestraVideo);
-  $("#apps_hacks").click(redirectApps);
-  $("#contacto").click(redirectContacto);
-
-  if(location.search.indexOf("fi") > -1){
-    $("body").css("display", "none");
-    $("body").fadeIn(400);
-  }
+  $("#apps_hacks").click(function(){
+    redirectPage("calchupadora.html");
+  });
+  $("#contacto").click(function(){
+    redirectPage("contacto.html");
+  });
 
   if(location.search.indexOf("quienes") > -1){
     $("body").css("display", "none");
     $("body").fadeIn(400, muestraTexto);
+  } else {
+    $("body").css("display", "none");
+    $("body").fadeIn(400);
   }
 }

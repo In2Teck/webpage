@@ -5,3 +5,13 @@ var delay = (function(){
         timer = setTimeout(callback, ms);
     };
 })();
+
+function redirectPage(page){
+  window.location = page;
+}
+
+function redirectFade(page){
+  $("body").fadeOut(400, function(){
+    redirectPage(page);        
+  });
+}

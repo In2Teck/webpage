@@ -64,7 +64,7 @@ hgroup a:hover {
   background-color: #EFEFEF;
 }
 
-hgroup h2 {
+hgroup h1, hgroup h2 {
   font-weight: normal;
   display: inline-block;
   margin: auto 0.5em;
@@ -91,7 +91,7 @@ header{
 }
 
 #in2teck_main {
-  background: url('../img/logo.png') no-repeat 100% center;
+  background: url('../img/in2teck_logo.png') no-repeat 100% center;
   background-size: 250px 96px;
   cursor: pointer;
   margin: 1em 0;
@@ -165,13 +165,15 @@ p {
   margin: 0.5em 1em;
 }
 
-#slider-code { height: 2em; overflow:hidden; }
-#slider-code .viewport {display: inline-block; width: 97%; height: 2em; overflow: hidden; position: relative; }
-#slider-code .buttons { display: inline-block; margin: 0 1em 0 -2em; position: absolute; }
-#slider-code .next { float: right; margin: 0 0 0 2em; position: absolute; }
+#slider-code { height: 2em; }
+#slider-code .viewport {float: left; width: 98%; height: 2em; overflow: hidden; position: relative; }
+#slider-code .buttons { font-family: 'Arial Black';}
+#slider-code .buttons:hover { cursor: pointer; }
+#slider-code .prev { float: left; margin: 0.2em 0.2em auto -1em;}
+#slider-code .next { float: right; margin: 0.2em -1em auto 0.5em;}
 #slider-code .disable { visibility: hidden; }
 #slider-code .overview { list-style: none; position: absolute; padding: 0; margin: 0; left: 0; top: 0; }
-#slider-code .overview li{ float: left; margin: 0.3em 0.1em 0; height: 2em;  width: auto;}
+#slider-code .overview li{ float: left; margin: 0.6em 0.1em 0; height: 2em;  width: auto;}
 
 .tagline {
   font-weight: bold;
@@ -180,11 +182,7 @@ p {
   transition: all 0.6s ease;
 }
 
-.text_project {
-  display: none;
-}
-
-@media screen and (max-width:730px) {
+@media screen and (max-width:730px) { 
 
   aside a img {
     margin: 0 0.3em;
@@ -237,16 +235,12 @@ p {
   }
 
   hgroup{
-    margin: 7em auto 2.5em;
+    margin: 8em auto 2.5em;
     width: 85%;
   }
 
-  hgroup h2 {
-    margin: 0.7em 0.5em;
-  }
-
   #in2teck_main {
-    background: url('../img/logo_min.png') no-repeat 20% center;
+    background: url('../img/in2teck_t_logo.png') no-repeat 20% center;
     background-size: 180px 60px;
     margin: 1em 0;
   }
@@ -267,6 +261,12 @@ p {
   nav li {
     width: 30%;
   }
+  
+  #slider-code .viewport {width: 86%; }
+  #slider-code .overview li{ margin: 0.3em 0.1em 0; }
+  #slider-code .buttons { font-family: arial; font-size: 2em; }
+  #slider-code .prev { margin: -0.2em 0.2em auto -0.3em; }
+  #slider-code .next { margin: -0.2em -0.3em auto 0.2em; }
 
   section {
     margin-top: 12em;

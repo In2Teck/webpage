@@ -1,18 +1,52 @@
 $(document).ready(init);
 
+var offset = { }
+
 function init(){
+
+  var _index = 1;
+  var index = 1; 
+  $.each( $(".project"), function(){
+    if (this.classList.contains("selected")){
+      _index = index;
+      return;
+    }
+    index++;
+  });
+
+  $("#slider-code").width();
+  var pause = 100; 
+  $(window).resize(function() {
+      delay(function() {
+        var position = 1;
+        var slider_width = $("#slider-code").width();
+        if (slider_width < 691) {
+          var ix = _index * 2 * 110;
+          position = Math.floor(ix/slider_width) + 1;
+          // Added additional li for more horizontal scrolling
+          if ($("#extra").length < 1) {
+            $(".overview").append("<li id='extra'></li>");
+          }
+        } else {
+          $("#extra").remove();
+        }
+        offset = { start: position };
+        $("#slider-code").tinycarousel(offset);
+      }, pause );
+  });
+  $(window).resize();
 
   $("body").css("display", "none");
   $("body").fadeIn(400);
-  $("#texto_calchupadora").fadeIn(400);
-
-  $("#quienes_somos").click(redirectQuienes);
-  $("#in2teck_main").click(redirectHome);
-  $("#contacto").click(redirectContacto);
+  $("#in2teck_main").click(function(){
+    redirectPage("index.html");
+  });
+  $("#contacto").click(function(){
+    redirectPage("contacto.html");
+  });
   $(".project").click(seleccionaMenu);
   $(".verdetalles").click(verDetalles);
   
-  $("#slider-code").tinycarousel({ pager: true });
   $(".yoxview").yoxview();
 }
 
@@ -38,30 +72,5 @@ function verDetalles(event){
 }
 
 function seleccionaMenu(event) {
-  $(".text_project").fadeOut(300);      
-  $(".project").removeClass("selected");
-  $("#"+event.currentTarget.id).addClass("selected");
-  setTimeout(function(){
-    $("#texto_"+event.currentTarget.id).fadeIn(300);
-  }, 300);
-}
-
-function redirectHome() {
-  $("body").fadeOut(400, function(){
-    redirectPage("index.html?fi");        
-  });  
-}
-
-function redirectQuienes() {
-  $("body").fadeOut(400, function(){
-    redirectPage("index.html?fi&quienes");        
-  });  
-}
-
-function redirectContacto() {
-
-}
-
-function redirectPage(page){
-  window.location = page;
+  redirectFade(event.currentTarget.id+".html");
 }

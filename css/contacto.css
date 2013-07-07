@@ -24,6 +24,10 @@ body {
   margin: auto;
 }
 
+button {
+
+}
+
 .client_logo {
   height: 50px;
 }
@@ -41,6 +45,29 @@ body {
 h1, h2, h3 {
   margin: 0;
   font-size: 1em; 
+}
+
+hgroup {
+  font-size: 0.8em;
+  text-align: left;
+  width: 54em;
+  margin: 1.5em auto 2.5em;
+}
+
+hgroup a {
+  color: #4F4F4F;
+  text-decoration: none;  
+  padding: 0.5em 0.1em;
+}
+
+hgroup a:hover {
+  background-color: #EFEFEF;
+}
+
+hgroup h2 {
+  font-weight: normal;
+  display: inline-block;
+  margin: auto 0.5em;
 }
 
 header{
@@ -116,26 +143,8 @@ p {
   transition: all 0.6s ease;
 }
 
-.t_bottom {
-  margin: 2em auto;
-}
-
-#texto{
-  height: 0;
-  opacity: 0;
-  overflow: hidden;
-  transition: opacity 0.6s ease;
-  width: 0;
-}
-
 .t_top {
   margin: 1em auto 2em;
-}
-
-#video{
-  height: 0;
-  transition: opacity 0.6s ease;
-  width: 0;
 }
 
 @media screen and (max-width:730px) {
@@ -211,7 +220,7 @@ p {
     margin-top: 10em;
   }
 
-  .t_bottom, .t_top {
+  .t_top {
     margin: 1.5em auto;
   }
 
