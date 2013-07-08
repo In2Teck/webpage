@@ -12,7 +12,11 @@ aside a img {
   width: 25px;
 }
 
-#blank_bottom{
+#blank_bottom {
+  display: none;
+}
+
+#blank_content {
   display: none;
 }
 
@@ -24,8 +28,21 @@ body {
   margin: auto;
 }
 
-button {
+.button {
+  font-size: 0.8em;
+  margin: 2em 1em 1em 1em;
+  text-align: center;
+}
 
+.button a {
+  background-color: #FAFAFA;
+  color: #4F4F4F;
+  padding: 0.5em;
+  text-decoration: none;  
+}
+
+.button a:hover {
+  background-color: #DADADA;
 }
 
 .client_logo {
@@ -42,32 +59,46 @@ button {
   width: 41em;
 }
 
+#formulario {
+  text-align: center;
+  width: 100%;
+}
+
+#formulario .field {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+}
+
+#formulario .text {
+  display: inline-block;
+  width: 50%;
+  text-align: left;
+  margin-top: 1em;
+}
+
+#formulario .label {
+  display: inline-block;
+  margin-left: 22%;
+  width: 20%;
+  text-align: left;
+}
+
+#formulario input {
+  border: none;
+  margin-top: 1em;
+  width: 16.5em;
+}
+
+#formulario textarea {
+  border: none;
+  height: 7em;
+  width: 16.5em;
+}
+
 h1, h2, h3 {
   margin: 0;
   font-size: 1em; 
-}
-
-hgroup {
-  font-size: 0.8em;
-  text-align: left;
-  width: 54em;
-  margin: 1.5em auto 2.5em;
-}
-
-hgroup a {
-  color: #4F4F4F;
-  text-decoration: none;  
-  padding: 0.5em 0.1em;
-}
-
-hgroup a:hover {
-  background-color: #EFEFEF;
-}
-
-hgroup h2 {
-  font-weight: normal;
-  display: inline-block;
-  margin: auto 0.5em;
 }
 
 header{
@@ -97,6 +128,32 @@ header{
   margin: 1em 0;
   height: 96px;
   width: 250px;
+}
+
+#informacion {
+  bottom: 0;
+  position: absolute;
+  width: 100%;
+}
+
+#informacion #mail {
+  float: right;
+  margin: 1em 1.5em;
+}
+
+#informacion #phone {
+  float: left;
+  margin: 1em auto;
+}
+
+#informacion a {
+  color: #4F4F4F;
+  text-decoration: none;  
+  padding: 0.5em;
+}
+
+#informacion a:hover{
+  background-color: #FAFAFA;
 }
 
 nav {
@@ -155,18 +212,46 @@ p {
 
   #blank_bottom {
     display: block;
+    height: 6em;
+  }
+
+  #blank_content {
+    display: block;
+    height: 2em;
   }
 
   #content {
     width: 80%;
-    height: 13em;
+    height: auto;
     position: static;
+  }
+
+  #formulario .field {
+    width: 70%;
+  }
+
+  #formulario .text {
+   width: 70%;
+  }
+
+  #formulario .label {
+    margin: auto 5% auto 0;
+    width: 20%;
+  }
+
+  #formulario input {
+    width: 95%;
+  }
+
+  #formulario textarea {
+    width: 95%;
+    height: 10em;
   }
 
   header {
     position: fixed;
     top:-0.5em;
-    height: 10em;
+    height: 9em;
     background: inherit;
   }
   
@@ -203,6 +288,16 @@ p {
     background-size: 180px 60px;
     margin: 1em 0;
   }
+  
+  #informacion {
+    bottom: 2em;
+    font-size: 0.8em;
+    position: relative;
+  }
+
+  #informacion #mail {
+    margin-right: -1em;
+  }
 
   nav {
     text-align: center;
@@ -217,11 +312,11 @@ p {
   }
 
   section {
-    margin-top: 10em;
+    margin-top: 9em;
   }
 
   .t_top {
-    margin: 1.5em auto;
+    margin: 1em auto 2em;
   }
 
   ul {
