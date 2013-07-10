@@ -29,11 +29,12 @@ body {
 }
 
 #content {
-  background-color: #EFEFEF;
+  background-color: #FAFAFA;
   height: 18em;
   margin: 0 auto;
-  padding: 1em;
+  padding: auto;
   position: relative;
+  text-align: center;
   transition: margin 0.6s ease;
   width: 41em;
 }
@@ -116,6 +117,10 @@ p {
   transition: all 0.6s ease;
 }
 
+.tall {
+  display: none;
+}
+
 .t_bottom {
   margin: 2em auto;
 }
@@ -132,13 +137,15 @@ p {
   margin: 1em auto 2em;
 }
 
-#video{
-  height: 0;
-  transition: opacity 0.6s ease;
-  width: 0;
+.video_content {
+  height: 18em;
 }
 
-@media screen and (max-width:730px) {
+.wide {
+  display: inline;
+}
+
+@media screen and (max-width:740px) {
 
   aside a img {
     margin: 0 0.3em;
@@ -211,12 +218,25 @@ p {
     margin-top: 9em;
   }
 
+  .tall {
+    margin: 1em auto auto -0.7em;
+    display: inline;
+  }
+
   .t_bottom, .t_top {
     margin: 1em auto 2em;
   }
 
   ul {
     padding: 0 0 0 1.5em;
+  }
+
+  .video_content {
+    height: 10em;
+  }
+
+  .wide {
+    display: none;
   }
 
 }

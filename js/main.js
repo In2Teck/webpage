@@ -17,8 +17,8 @@ function muestraTexto() {
 function muestraVideo() {
   $("#blank_bottom").css("height", "0");
   $(".tagline").css("opacity", 1);
-  $("#texto").css({opacity: 0, height: "0", width: "0"});
   $("#video").css({opacity: 1, height: "auto", width: "auto"});
+  $("#texto").css({opacity: 0, height: "0", width: "0"});
   $(".nav_menu").removeClass("selected");
   $(".t_bottom").css("display", "block");
   $("#content").css(unstretch);
@@ -30,25 +30,44 @@ function init(){
   $(window).resize(function() {
       delay(function() {
           var width = $(window).width();
-          if( width <= 730 ) {
+          if( width <= 740 ) {
             stretch = {
+              "background-color": "#EFEFEF",
               height: "auto",
-              margin: "-3em auto"
+              margin: "-3em auto",
+              padding: "1em",
+              "text-align": "left"
             }
             unstretch = {
+              "background-color": "#FAFAFA",
               height: "13em",
-              margin: "0 auto"
+              margin: "0 auto",
+              padding: "0",
+              "text-align": "center"
             }
           } else {
             stretch = {
+              "background-color": "#EFEFEF",
               height: "auto",
-              margin: "-3em auto"
+              margin: "-3em auto",
+              padding: "1em",
+              "text-align": "left"
             }
             unstretch = {
+              "background-color": "#FAFAFA",
               height: "18em",
-              margin: "0 auto"
+              margin: "0 auto",
+              padding: "0",
+              "text-align": "center"
             }
           }
+
+          if($(".tagline").css("opacity") == "0"){
+            $("#content").css(stretch);
+          }else{
+            $("#content").css(unstretch);
+          }
+
       }, pause );
   });
   $(window).resize();
