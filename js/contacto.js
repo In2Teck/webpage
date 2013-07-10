@@ -2,6 +2,8 @@ $(document).ready(init);
 
 function init(){
   
+  loadGoogleAnalytics(); 
+
   var pause = 100; 
   $(window).resize(function() {
       delay(function() {

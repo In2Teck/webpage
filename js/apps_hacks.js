@@ -4,6 +4,8 @@ var offset = { }
 
 function init(){
 
+  loadGoogleAnalytics();
+
   var _index = 1;
   var index = 1; 
   $.each( $(".project"), function(){

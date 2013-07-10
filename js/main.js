@@ -26,6 +26,8 @@ function muestraVideo() {
 
 function init(){
 
+  loadGoogleAnalytics();
+
   var pause = 100; 
   $(window).resize(function() {
       delay(function() {
