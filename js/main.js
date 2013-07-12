@@ -26,6 +26,15 @@ function muestraVideo() {
 
 function init(){
 
+  if(location.search.indexOf("quienes") > -1){
+    muestraTexto();
+    $("body").css("display", "none");
+    $("body").fadeIn(400);
+  } else {
+    $("body").css("display", "none");
+    $("body").fadeIn(400);
+  }
+
   loadGoogleAnalytics();
 
   var pause = 100; 
@@ -41,7 +50,7 @@ function init(){
               "text-align": "left"
             }
             unstretch = {
-              "background-color": "#FAFAFA",
+              "background-color": "#FFFFFF",
               height: "13em",
               margin: "0 auto",
               padding: "0",
@@ -56,7 +65,7 @@ function init(){
               "text-align": "left"
             }
             unstretch = {
-              "background-color": "#FAFAFA",
+              "background-color": "#FFFFFF",
               height: "18em",
               margin: "0 auto",
               padding: "0",
@@ -83,11 +92,4 @@ function init(){
     redirectPage("contacto.html");
   });
 
-  if(location.search.indexOf("quienes") > -1){
-    $("body").css("display", "none");
-    $("body").fadeIn(400, muestraTexto);
-  } else {
-    $("body").css("display", "none");
-    $("body").fadeIn(400);
-  }
 }

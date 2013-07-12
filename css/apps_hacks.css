@@ -17,7 +17,7 @@ aside a img {
 }
 
 body {
-  background: url('../img/background.png') repeat-x 98% bottom fixed, #FAFAFA;
+  background: url('../img/background.png') repeat-x 98% bottom fixed, #FFFFFF;
   color: #4F4F4F;
   font-size: 16px;
   font-family: helvetica, arial;
@@ -56,8 +56,8 @@ hgroup {
 
 hgroup a {
   color: #4F4F4F;
+  padding: 0.5em 0;
   text-decoration: none;  
-  padding: 0.5em 0.1em;
 }
 
 hgroup a:hover {
@@ -116,7 +116,7 @@ header{
 }
 
 .info a:hover {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
 }
 
 nav {
@@ -165,7 +165,7 @@ p {
   margin: 0.5em 1em;
 }
 
-#slider-code { height: 2em; }
+#slider-code { height: 2em;}
 #slider-code .viewport {float: left; width: 98%; height: 2em; overflow: hidden; position: relative; }
 #slider-code .buttons { font-family: 'Arial Black';}
 #slider-code .buttons:hover { cursor: pointer; }

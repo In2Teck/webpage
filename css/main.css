@@ -17,7 +17,7 @@ aside a img {
 }
 
 body {
-  background: url('../img/background.png') repeat-x 98% bottom fixed, #FAFAFA;
+  background: url('../img/background.png') repeat-x 98% bottom fixed, #FFFFFF;
   color: #4F4F4F;
   font-size: 16px;
   font-family: helvetica, arial;
@@ -29,13 +29,13 @@ body {
 }
 
 #content {
-  background-color: #FAFAFA;
+  background-color: #FFFFFF;
   height: 18em;
   margin: 0 auto;
   padding: auto;
   position: relative;
   text-align: center;
-  transition: margin 0.6s ease;
+  transition: opacity 0.6s ease;
   width: 41em;
 }
 
