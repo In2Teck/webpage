@@ -11,6 +11,7 @@
     <script src="js/jquery.min.js"></script>
 	  <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/froogaloop.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/main.js"></script>
   </head>
@@ -43,10 +44,9 @@
           Somos emprendedores geeks
         </h1>
         <div id="content">
-          <video id="video" id="in2teck_video" class="video_content" controls>
-            <source src="video/in2teck_promo.mp4" type='video/mp4; codecs="avc1, mp4a"' />
-            <source src="video/in2teck_promo.webm" type='video/webm; codecs="vp8, vorbis"' />
-          </video>
+          <div id="video" >
+            <iframe id="in2teck_player" src="http://player.vimeo.com/video/70302850?title=0&amp;byline=0&amp;portrait=0&api=1&player_id=in2teck_player"  class="video_content" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+          </div>
           <div id="texto">
             <h3> ¿Quiénes somos? </h3><br/>
             <p>Somos un equipo de emprendedores geeks expertos en desarrollo de aplicaciones sociales en internet. </p><br/>

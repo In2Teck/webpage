@@ -6,6 +6,8 @@ var unstretch = { }
 
 var videoDisplay = { }
 
+var iframe, player = null;
+
 function muestraTexto() {
   $("#blank_bottom").css("height", "7em");
   $(".tagline").css("opacity", 0);
@@ -14,7 +16,7 @@ function muestraTexto() {
   $("#quienes_somos").addClass("selected");
   $(".t_bottom").css("display", "none");
   $("#content").css(stretch);
-  $("video")[0].pause();
+  player.api("pause");
 }
 
 function muestraVideo() {
@@ -62,7 +64,7 @@ function init(){
             videoDisplay = {
               height: "10em",
               opacity: 1,
-              width: "auto"
+              width: "18em"
             }
           } else {
             stretch = {
@@ -82,7 +84,7 @@ function init(){
             videoDisplay = {
               height: "18em",
               opacity: 1,
-              width: "auto"
+              width: "32em"
             }
           }
 
@@ -106,4 +108,6 @@ function init(){
     redirectPage("contacto.html");
   });
 
+  iframe = $('#in2teck_player')[0];
+  player = $f(iframe);
 }
