@@ -141,10 +141,6 @@ p {
   height: 18em;
 }
 
-.wide {
-  display: inline;
-}
-
 @media screen and (max-width:740px) {
 
   aside a img {
@@ -232,11 +228,8 @@ p {
   }
 
   .video_content {
+    margin-left: -1.5em;
     height: 10em;
-  }
-
-  .wide {
-    display: none;
   }
 
 }

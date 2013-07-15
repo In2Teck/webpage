@@ -4,6 +4,8 @@ var stretch = { }
 
 var unstretch = { }
 
+var videoDisplay = { }
+
 function muestraTexto() {
   $("#blank_bottom").css("height", "7em");
   $(".tagline").css("opacity", 0);
@@ -12,12 +14,13 @@ function muestraTexto() {
   $("#quienes_somos").addClass("selected");
   $(".t_bottom").css("display", "none");
   $("#content").css(stretch);
+  $("video")[0].pause();
 }
 
 function muestraVideo() {
   $("#blank_bottom").css("height", "0");
   $(".tagline").css("opacity", 1);
-  $("#video").css({opacity: 1, height: "auto", width: "auto"});
+  $("#video").css(videoDisplay);
   $("#texto").css({opacity: 0, height: "0", width: "0"});
   $(".nav_menu").removeClass("selected");
   $(".t_bottom").css("display", "block");
@@ -56,6 +59,11 @@ function init(){
               padding: "0",
               "text-align": "center"
             }
+            videoDisplay = {
+              height: "10em",
+              opacity: 1,
+              width: "auto"
+            }
           } else {
             stretch = {
               "background-color": "#EFEFEF",
@@ -71,12 +79,18 @@ function init(){
               padding: "0",
               "text-align": "center"
             }
+            videoDisplay = {
+              height: "18em",
+              opacity: 1,
+              width: "auto"
+            }
           }
 
           if($(".tagline").css("opacity") == "0"){
             $("#content").css(stretch);
           }else{
             $("#content").css(unstretch);
+            $("#video").css(videoDisplay);
           }
 
       }, pause );
