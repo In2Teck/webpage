@@ -31,6 +31,9 @@ function muestraVideo() {
 
 function init(){
 
+  iframe = $('#in2teck_player')[0];
+  player = $f(iframe);
+
   if(location.search.indexOf("quienes") > -1){
     muestraTexto();
     $("body").css("display", "none");
@@ -107,7 +110,4 @@ function init(){
   $("#contacto").click(function(){
     redirectPage("contacto.html");
   });
-
-  iframe = $('#in2teck_player')[0];
-  player = $f(iframe);
 }
