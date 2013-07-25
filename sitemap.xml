@@ -51,7 +51,15 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>http://www.in2teck.com/gdltradicional</loc>
+  <loc>http://www.in2teck.com/furiaoro.html</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.in2teck.com/gdltradicional.html</loc>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>http://www.in2teck.com/memegenerator.html</loc>
   <priority>0.51</priority>
 </url>
 </urlset>

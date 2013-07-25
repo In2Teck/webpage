@@ -23,14 +23,15 @@ function init(){
         var position = 1;
         var slider_width = $("#slider-code").width();
         if (slider_width < 691) {
-          var ix = _index * 2 * 110;
+          var ix = _index * 2 * 120;
           position = Math.floor(ix/slider_width) + 1;
-          // Added additional li for more horizontal scrolling
-          if ($("#extra").length < 1) {
-            $(".overview").append("<li id='extra'></li>");
-          }
         } else {
-          $("#extra").remove();
+          position = _index > 4 ? _index : 1;
+          //$("#extra").remove();
+        }
+        // Added additional li for more horizontal scrolling
+        if ($("#extra").length < 1) {
+          $(".overview").append("<li id='extra'></li>");
         }
         offset = { start: position };
         $("#slider-code").tinycarousel(offset);
