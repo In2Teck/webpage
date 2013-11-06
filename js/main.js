@@ -6,12 +6,16 @@ var unstretch = { }
 
 var videoDisplay = { }
 
+var newsDisplay = { }
+
 var iframe, player = null;
 
 function muestraTexto() {
   $("#blank_bottom").css("height", "7em");
   $(".tagline").css("opacity", 0);
-  $("#video").css({opacity: 0, height: "0", width: "0"});
+  $("#video").css({opacity: 0, height: 0, width: 0});
+  $("#news").css({opacity: 0, height: 0, width: 0, margin: "0 0 0.5em 0"});
+  $("#news_content").css("display", "none");
   $("#texto").css({opacity: 1, height: "auto", width: "auto"});
   $("#quienes_somos").addClass("selected");
   $(".t_bottom").css("display", "none");
@@ -23,7 +27,9 @@ function muestraVideo() {
   $("#blank_bottom").css("height", "0");
   $(".tagline").css("opacity", 1);
   $("#video").css(videoDisplay);
-  $("#texto").css({opacity: 0, height: "0", width: "0"});
+  $("#news").css(newsDisplay);
+  $("#news_content").css("display", "block");
+  $("#texto").css({opacity: 0, height: 0, width: 0});
   $(".nav_menu").removeClass("selected");
   $(".t_bottom").css("display", "block");
   $("#content").css(unstretch);
@@ -51,43 +57,59 @@ function init(){
           var width = $(window).width();
           if( width <= 740 ) {
             stretch = {
-              "background-color": "#EFEFEF",
+              //"background-color": "#EFEFEF",
               height: "auto",
               margin: "-3em auto",
               padding: "1em",
-              "text-align": "left"
+              "text-align": "left",
+              width: "auto"
             }
             unstretch = {
-              "background-color": "#FFFFFF",
+              //"background-color": "#FFFFFF",
               height: "13em",
               margin: "0 auto",
               padding: "0",
-              "text-align": "center"
+              "text-align": "center",
+              width: "auto"
             }
             videoDisplay = {
               height: "10em",
               opacity: 1,
               width: "18em"
             }
+            newsDisplay = {
+              height: "16.3em",
+              margin: "4em 1em",
+              opacity: 1,
+              width: "12.5em"
+            }
           } else {
             stretch = {
-              "background-color": "#EFEFEF",
+              //"background-color": "#EFEFEF",
               height: "auto",
               margin: "-3em auto",
               padding: "1em",
-              "text-align": "left"
+              "text-align": "left",
+              width: "auto"
             }
             unstretch = {
-              "background-color": "#FFFFFF",
+              //"background-color": "#EFEFEF",
               height: "18em",
               margin: "0 auto",
               padding: "0",
-              "text-align": "center"
+              "text-align": "center",
+              width: "auto"
             }
             videoDisplay = {
               height: "18em",
               opacity: 1,
               width: "32em"
+            }
+            newsDisplay = {
+              height: "16.3em",
+              margin: "4em 1em",
+              opacity: 1,
+              width: "12.5em"
             }
           }
 
@@ -96,6 +118,7 @@ function init(){
           }else{
             $("#content").css(unstretch);
             $("#video").css(videoDisplay);
+            $("#news").css(newsDisplay);
           }
 
       }, pause );

@@ -1,6 +1,6 @@
 aside {
-  margin: auto 0 auto 1em;
-  text-align: right;
+  margin: auto 0 auto 2em;
+  text-align: left;
 }
 
 aside li {
@@ -29,7 +29,6 @@ body {
 }
 
 #content {
-  background-color: #FFFFFF;
   height: 18em;
   margin: 0 auto;
   padding: auto;
@@ -39,6 +38,33 @@ body {
   width: 41em;
 }
 
+#main_container{
+  float: left;
+  margin: auto 1em auto 1.5em;
+}
+
+#main_content{
+  width: 100%;
+}
+
+#news{
+  background-color: #FFFFFF;
+  display: inline-block;
+  margin: 4em 1em;
+  padding: 1em;
+  vertical-align: top;
+  height: 16.3em;
+  width: 12.5em;
+}
+
+#news_content {
+  font-size: 0.8em;
+}
+
+#news_content ul{
+  padding-left: 1.3em;
+}
+
 h1, h2, h3 {
   margin: 0;
   font-size: 1em; 
@@ -46,22 +72,30 @@ h1, h2, h3 {
 
 header{
   text-align: center;
-  width: 100%;
+  margin: auto;
 }
 
 #header_left{
   display: inline-block;
+  height: 12em;
+  margin: auto 23em auto 0.5em;
+  //margin-left: -3em;
+  //width: 40%;
 }
 
 #header_logo {
   text-align: right;
-  height: 7em;
   margin: auto;
+  height: 7em;
 }
 
 #header_right {
   display: inline-block;
-  margin: 0 1em 0 10em;
+}
+
+.img_nueva {
+  width: 42px;
+  height: 13px;
 }
 
 #in2teck_main {
@@ -74,7 +108,7 @@ header{
 }
 
 nav {
-  text-align: right;
+  text-align: left;
   width: 100%;
 }
 
@@ -98,11 +132,14 @@ nav li h1{
 }
 
 nav ul{
-  padding: 0 0 0 0.7em;
+  padding: 0;
 }
 
 p {
   margin: 0;
+}
+
+section{
 }
 
 .selected {
@@ -118,7 +155,7 @@ p {
 }
 
 .t_bottom {
-  margin: 2em auto;
+  margin: 1.5em auto;
 }
 
 #texto{
@@ -130,7 +167,7 @@ p {
 }
 
 .t_top {
-  margin: 1em auto 2em;
+  margin: 1.5em auto;
 }
 
 #video{
@@ -140,6 +177,12 @@ p {
 .video_content {
   height: 18em;
   width: 32em;
+}
+
+#wrapper {
+   background-color: #EFEFEF;
+   width: 51.5em; 
+   margin: auto;
 }
 
 @media screen and (max-width:740px) {
