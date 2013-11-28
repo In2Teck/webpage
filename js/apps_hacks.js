@@ -23,10 +23,10 @@ function init(){
         var position = 1;
         var slider_width = $("#slider-code").width();
         if (slider_width < 691) {
-          var ix = _index * 2 * 120;
+          var ix = _index * 2 * 100;
           position = Math.floor(ix/slider_width) + 1;
         } else {
-          position = _index > 4 ? _index : 1;
+          position = _index > 5 ? _index - 1 : 1;
           //$("#extra").remove();
         }
         // Added additional li for more horizontal scrolling
