@@ -78,10 +78,10 @@ function init(){
               width: "18em"
             }
             newsDisplay = {
-              height: "16.3em",
+              height: "18.2em",
               margin: "4em 1em",
               opacity: 1,
-              width: "12.5em"
+              width: "14.5em"
             }
           } else {
             stretch = {
@@ -106,10 +106,10 @@ function init(){
               width: "32em"
             }
             newsDisplay = {
-              height: "16.3em",
+              height: "18.2em",
               margin: "4em 1em",
               opacity: 1,
-              width: "12.5em"
+              width: "14.5em"
             }
           }
 
@@ -133,4 +133,27 @@ function init(){
   $("#contacto").click(function(){
     redirectPage("contacto.html");
   });
+
+  //Hide SubLevel Menus
+	$('#header ul li ul').hide();
+
+	//MENU OnHover Show SubLevel Menus
+	$('#header ul li').hover(
+		//OnHover
+		function(){
+			//Hide Other Menus
+			$('#header ul li').not($('ul', this)).stop();
+
+			// Show Hoved Menu
+			$('ul', this).slideDown();
+		},
+		//OnOut
+		function(){
+			// Hide Other Menus
+			$('ul', this).slideUp();
+
+			//Remove the Arrow
+			$('ul li.arrow', this).remove();
+		}
+	);
 }

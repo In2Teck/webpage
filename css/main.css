@@ -51,18 +51,14 @@ body {
   background-color: #FFFFFF;
   display: inline-block;
   margin: 4em 1em;
-  padding: 1em;
   vertical-align: top;
-  height: 16.3em;
-  width: 12.5em;
+  height: 18.2em;
+  width: 14.5em;
 }
 
-#news_content {
-  font-size: 0.8em;
-}
-
-#news_content ul{
-  padding-left: 1.3em;
+#news h3{
+  font-size: 1em;
+  margin: 0.4em 0.6em 0.5em;
 }
 
 h1, h2, h3 {
@@ -78,9 +74,7 @@ header{
 #header_left{
   display: inline-block;
   height: 12em;
-  margin: auto 23em auto 0.5em;
-  //margin-left: -3em;
-  //width: 40%;
+  margin: auto 20em auto 0.5em;
 }
 
 #header_logo {
@@ -91,6 +85,8 @@ header{
 
 #header_right {
   display: inline-block;
+  vertical-align: bottom;
+  margin: -1em auto 1em;
 }
 
 .img_nueva {
