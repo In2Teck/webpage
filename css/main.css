@@ -74,7 +74,7 @@ header{
 #header_left{
   display: inline-block;
   height: 12em;
-  margin: auto 20em auto 0.5em;
+  margin: auto 24% auto 0.5em;
 }
 
 #header_logo {
@@ -181,7 +181,22 @@ section{
    margin: auto;
 }
 
-@media screen and (max-width:740px) {
+@media screen and (max-width:830px) {
+  
+  .video_content {
+    width: 22em;
+  }
+
+  #wrapper {
+    width: 42em;
+  }
+
+  #video {
+    width: 22em;
+  }
+}
+
+@media screen and (max-width:700px) {
 
   aside a img {
     margin: 0 0.3em;
@@ -202,12 +217,14 @@ section{
     top:-0.5em;
     height: 9em;
     background: inherit;
+    width: 100%;
   }
   
   #header_left {
     position: relative;
-    top: 5.5em;
+    top: -20px;
     width: 100%;
+    margin: auto;
   }
 
   #header_logo {
@@ -220,11 +237,10 @@ section{
   }
 
   #header_right {
-    left: 0;
-    margin: 0;
+    margin: auto 1em auto auto;
     position: absolute;
     top: -20px;
-    width: 100%;
+    right: 0;
   }
 
   #header_social {

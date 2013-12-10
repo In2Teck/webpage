@@ -8,6 +8,8 @@ var videoDisplay = { }
 
 var newsDisplay = { }
 
+var wrapperWidth = { }
+
 var iframe, player = null;
 
 function muestraTexto() {
@@ -55,7 +57,7 @@ function init(){
   $(window).resize(function() {
       delay(function() {
           var width = $(window).width();
-          if( width <= 740 ) {
+          if( width <= 700 ) {
             stretch = {
               //"background-color": "#EFEFEF",
               height: "auto",
@@ -100,11 +102,20 @@ function init(){
               "text-align": "center",
               width: "auto"
             }
-            videoDisplay = {
-              height: "18em",
-              opacity: 1,
-              width: "32em"
-            }
+            if (width <= 830) {
+              videoDisplay = {
+                height: "18em",
+                opacity: 1,
+                width: "22em"
+              }
+            } else {
+              videoDisplay = {
+                height: "18em",
+                opacity: 1,
+                width: "32em"
+              }
+            } 
+            
             newsDisplay = {
               height: "18.2em",
               margin: "4em 1em",
