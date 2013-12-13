@@ -1,0 +1,87 @@
+/*
+Theme Name: TutToaster Navigation
+Theme URI: http://tuttoaster.com
+Description: Theme for TutToaster Multi-Level Wordpress Navigation Tutorial
+Version: 2.9.2
+Author: Cody Ryan Robertson
+Author URI: http://tuttoaster.com
+Tags: tuttoaster, navigation, unfinished
+*/
+
+.left{
+  float: left;
+  width: 110px;
+	border-right: 1px solid #CCC;
+}
+
+.right{
+  width: 120px;
+  margin-left: 1em;
+}
+
+/* Header */
+#header {
+  height: 5em;
+  display: inline-block;
+  margin: -1.5em auto 0.5em;
+  z-index: 99;
+  position: relative;
+}
+
+/* Top Level Menu */
+#header ul {
+	margin: 0 auto;
+}
+
+#header ul li {
+	display: block;
+	float: left;
+	margin: 40px 0 0;
+	width: 100px;
+}
+
+#header ul li a {
+}
+
+/* Sub Level Nav */
+#header ul li ul {
+	background: #F4F4F4;
+	border: 0px solid #000;
+	box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.5);
+	margin: 10px 0 0 -80px;
+	padding: 0 10px 0;
+	position: relative;
+	width: 240px;
+}
+
+#header ul li ul li {
+	border-bottom: 1px solid #CCC;
+	display: block;
+	float: none;
+	height: 20px;
+	padding: 7px 0;
+	width: 240px;
+	margin: 0;
+}
+
+#header ul li ul li a {
+  font-size: 0.7em;
+	text-shadow: none;
+}
+
+#header ul li ul li a:hover {
+	color: #F45D11;
+  background-color: transparent;
+}
+
+#header ul li ul li:last-child:not(li.arrow) {
+	border: 0;
+}
+
+@media screen and (max-width:690px) {
+
+  #header ul li {
+	  width: 33%;
+  }
+
+}

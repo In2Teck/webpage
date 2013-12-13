@@ -1,6 +1,6 @@
 aside {
-  margin: auto 0 auto 1em;
-  text-align: right;
+  margin: auto 0 auto 2em;
+  text-align: left;
 }
 
 aside li {
@@ -30,12 +30,12 @@ body {
 
 #content {
   background-color: #EFEFEF;
-  height: 18em;
+  height: 21.5em;
   margin: 0 auto;
   padding: 1em;
   position: relative;
   transition: margin 0.6s ease;
-  width: 41em;
+  width: 49.5em;
 }
 
 .details {
@@ -47,47 +47,27 @@ h1, h2, h3 {
   font-size: 1em; 
 }
 
-hgroup {
-  font-size: 0.8em;
-  text-align: left;
-  width: 54em;
-  margin: 1em auto 2em;
-}
-
-hgroup a {
-  color: #4F4F4F;
-  padding: 0.5em 0;
-  text-decoration: none;  
-}
-
-hgroup a:hover {
-  background-color: #EFEFEF;
-}
-
-hgroup h1, hgroup h2 {
-  font-weight: normal;
-  display: inline-block;
-  margin: auto 0.5em;
-}
-
 header{
   text-align: center;
-  width: 100%;
+  margin: auto;
 }
 
 #header_left{
   display: inline-block;
+  height: 12em;
+  margin: auto 24% auto 0.5em;
 }
 
 #header_logo {
   text-align: right;
-  height: 7em;
   margin: auto;
+  height: 7em;
 }
 
 #header_right {
   display: inline-block;
-  margin: 0 1em 0 10em;
+  vertical-align: bottom;
+  margin: -1em auto 1em;
 }
 
 #in2teck_main {
@@ -103,24 +83,25 @@ header{
   bottom: 0;
   font-size: 0.8em;
   left: 0;
-  margin-bottom: 1em;
+  margin-bottom: 2em;
   position: absolute;
   right: 0;
   text-align: center;
 }
 
 .info a {
+  background-color: #FFFFFF;
   color: #4F4F4F;
   text-decoration: none;  
   padding: 0.5em;
 }
 
 .info a:hover {
-  background-color: #FFFFFF;
+  background-color: #DADADA;
 }
 
 nav {
-  text-align: right;
+  text-align: left;
   width: 100%;
 }
 
@@ -144,7 +125,7 @@ nav li h1{
 }
 
 nav ul{
-  padding: 0 0 0 0.7em;
+  padding: 0;
 }
 
 p {
@@ -154,6 +135,14 @@ p {
 .selected {
   background-color: #EFEFEF;
   color: #F45D11;
+}
+
+.sub_selected {
+  color: #F45D11;
+}
+
+.submenu_selected {
+  background-color: #EFEFEF;
 }
 
 .showcase {
@@ -182,7 +171,23 @@ p {
   transition: all 0.6s ease;
 }
 
-@media screen and (max-width:730px) { 
+.t_top {
+  margin: 0.5em auto 1em;
+}
+
+@media screen and (max-width:830px) {
+  #content {
+    width: 90%;
+    height: auto;
+  }
+  
+  .info {
+    margin-bottom: 1em;
+    position: relative;
+  }
+}
+
+@media screen and (max-width:690px) { 
 
   aside a img {
     margin: 0 0.3em;
@@ -202,14 +207,17 @@ p {
   header {
     position: fixed;
     top:-0.5em;
-    height: 12.5em;
+    height: 9em;
     background: inherit;
+    width: 100%;
   }
   
   #header_left {
     position: relative;
-    top: 5.5em;
+    display: block;
+    top: -20px;
     width: 100%;
+    margin: auto;
   }
 
   #header_logo {
@@ -222,23 +230,17 @@ p {
   }
 
   #header_right {
-    left: 0;
-    margin: 0;
+    margin: auto 1em auto auto;
     position: absolute;
     top: -20px;
-    width: 100%;
+    right: 0;
   }
 
   #header_social {
     display: inline-block;
     margin-top: 3em;
   }
-
-  hgroup{
-    margin: 8em auto 2.5em;
-    width: 85%;
-  }
-
+  
   #in2teck_main {
     background: url('../img/in2teck_t_logo.png') no-repeat 20% center;
     background-size: 180px 60px;
@@ -246,7 +248,7 @@ p {
   }
 
   .info {
-    margin-bottom: -0.5em;
+    margin-bottom: 1em;
     position: relative;
   }
 
@@ -269,7 +271,7 @@ p {
   #slider-code .next { margin: -0.2em -0.3em auto 0.2em; }
 
   section {
-    margin-top: 12em;
+    margin-top: 9em;
   }
 
   ul {

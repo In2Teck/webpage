@@ -1,6 +1,6 @@
 aside {
-  margin: auto 0 auto 1em;
-  text-align: right;
+  margin: auto 0 auto 2em;
+  text-align: left;
 }
 
 aside li {
@@ -51,12 +51,12 @@ body {
 
 #content {
   background-color: #EFEFEF;
-  height: 18em;
+  height: 21.5em;
   margin: 0 auto;
   padding: 1em;
   position: relative;
   transition: margin 0.6s ease;
-  width: 41em;
+  width: 49em;
 }
 
 #formulario {
@@ -103,22 +103,25 @@ h1, h2, h3 {
 
 header{
   text-align: center;
-  width: 100%;
+  margin: auto;
 }
 
 #header_left{
   display: inline-block;
+  height: 12em;
+  margin: auto 24% auto 0.5em;
 }
 
 #header_logo {
   text-align: right;
-  height: 7em;
   margin: auto;
+  height: 7em;
 }
 
 #header_right {
   display: inline-block;
-  margin: 0 1em 0 10em;
+  vertical-align: bottom;
+  margin: -1em auto 1em;
 }
 
 #in2teck_main {
@@ -157,7 +160,7 @@ header{
 }
 
 nav {
-  text-align: right;
+  text-align: left;
   width: 100%;
 }
 
@@ -181,7 +184,7 @@ nav li h1{
 }
 
 nav ul{
-  padding: 0 0 0 0.7em;
+  padding: 0;
 }
 
 p {
@@ -193,6 +196,10 @@ p {
   color: #F45D11;
 }
 
+.submenu_selected {
+  background-color: #EFEFEF;
+}
+
 .tagline {
   font-weight: bold;
   opacity: 1;
@@ -201,10 +208,16 @@ p {
 }
 
 .t_top {
-  margin: 1em auto 2em;
+  margin: 0.5em auto 1em;
 }
 
-@media screen and (max-width:730px) {
+@media screen and (max-width:830px) {
+  #content {
+    width: 90%;
+  }
+}
+
+@media screen and (max-width:690px) {
 
   aside a img {
     margin: 0 0.3em;
@@ -253,12 +266,15 @@ p {
     top:-0.5em;
     height: 9em;
     background: inherit;
+    width: 100%;
   }
   
   #header_left {
     position: relative;
-    top: 5.5em;
+    display: block;
+    top: -20px;
     width: 100%;
+    margin: auto;
   }
 
   #header_logo {
@@ -271,11 +287,10 @@ p {
   }
 
   #header_right {
-    left: 0;
-    margin: 0;
+    margin: auto 1em auto auto;
     position: absolute;
     top: -20px;
-    width: 100%;
+    right: 0;
   }
 
   #header_social {

@@ -6,39 +6,6 @@ function init(){
 
   loadGoogleAnalytics();
 
-  var _index = 1;
-  var index = 1; 
-  $.each( $(".project"), function(){
-    if (this.classList.contains("selected")){
-      _index = index;
-      return;
-    }
-    index++;
-  });
-
-  $("#slider-code").width();
-  var pause = 100; 
-  $(window).resize(function() {
-      delay(function() {
-        var position = 1;
-        var slider_width = $("#slider-code").width();
-        if (slider_width < 691) {
-          var ix = _index * 2 * 100;
-          position = Math.floor(ix/slider_width) + 1;
-        } else {
-          position = _index > 5 ? _index - 1 : 1;
-          //$("#extra").remove();
-        }
-        // Added additional li for more horizontal scrolling
-        if ($("#extra").length < 1) {
-          $(".overview").append("<li id='extra'></li>");
-        }
-        offset = { start: position };
-        $("#slider-code").tinycarousel(offset);
-      }, pause );
-  });
-  $(window).resize();
-
   $("body").css("display", "none");
   $("body").fadeIn(400);
   $("#in2teck_main").click(function(){
@@ -51,6 +18,8 @@ function init(){
   $(".verdetalles").click(verDetalles);
   
   $(".yoxview").yoxview();
+
+  fixMenu();
 }
 
 function verDetalles(event){

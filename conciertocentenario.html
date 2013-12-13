@@ -8,29 +8,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="css/normalize.min.css" />
     <link rel="stylesheet" href="css/apps_hacks.css">
+    <link rel="stylesheet" href="css/menu.css">
     <script src="js/jquery.min.js"></script>
 	  <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
     <script src="js/yoxview/yoxview-init.js"></script>
-    <script src="js/jquery.tinycarousel.min.js"></script>
+    <script src="js/froogaloop.min.js"></script>
     <script src="js/util.js"></script>
     <script src="js/apps_hacks.js"></script>
   </head>
     <body>
       <header>
         <div id="header_left">
-          <nav>
+          <div id="header_logo">
+            <div id="in2teck_main"></div>
+          </div>
+          <nav id="header">
 		        <ul>
   	  		    <li><a href="index.html?quienes" class="nav_menu" id="quienes_somos">Nosotros</a></li>
-              <li><a href="#" class="nav_menu selected" id="apps_hacks">Portafolio</a></li>
+  	  	  	  <li><a href="#" class="nav_menu selected" id="apps_hacks">Portafolio</a>
+                <ul>
+                  <li><a class="left" href="werun.html">Corre por tu barrio</a><a class="right" href="wikiapodos.html">Wikiapodos</a></li>
+                  <li><a class="left" href="calchupadora.html">Calchupadora</a><a class="right" href="cetesdirecto.html">CETESDirecto</a></li>
+                  <li><a class="left" href="gdltradicional.html">GDLTradicional</a><a class="right" href="chutapoints.html">Chutapoints</a></li>
+                  <li><a class="left" href="memegenerator.html">Memegenerator</a><a class="right" href="iee.html">I.E.E.</a></li>
+                  <li><a class="left sub_selected" href="conciertocentenario.html">Concierto Centenario</a><a class="right" href="massexys.html">Más Sexys</a></li>
+                  <li><a class="left" href="furiaoro.html">Furia Oro</a><a class="right" href="speedBee.html">SpeedBEE</a></li>
+                </ul>
+              </li>
         			<li><a href="contacto.html" class="nav_menu" id="contacto">Contacto</a></li>
         		</ul>    
           </nav>
         </div>
         <div id="header_right">
-          <div id="header_logo">
-            <div id="in2teck_main"></div>
-          </div> 
           <aside id="header_social">
             <ul>
               <li><a href="http://www.facebook.com/In2Teck" target="_blank"><img src="img/facebook.png" alt="facebook icon"></a></li>
@@ -39,29 +49,12 @@
             </ul>
           </aside>
         </div>
-        <hgroup>
-          <div id="slider-code">
-            <div class="buttons prev"><</div>
-            <div class="viewport">
-              <ul class="overview">
-                <li><a href="werun.html" class="project" id="werun"><h1>Corre por tu Barrio</h1></a></li>
-                <li><a href="calchupadora.html" class="project" id="calchupadora"><h2>Calchupadora</h2></a></li>
-                <li><a href="cetesdirecto.html" class="project" id="cetesdirecto"><h2>CETESDirecto</h2></a></li>
-                <li><a href="gdltradicional.html" class="project" id="gdltradicional"><h2>GDL Tradicional</h2></a></li>
-                <li><a href="chutapoints.html" class="project" id="chutapoints"><h2>Chutapoints</h2></a></li>
-                <li><a href="memegenerator.html" class="project" id="memegenerator"><h2>Memegenerator</h2></a></li>
-                <li><a href="iee.html" class="project" id="iee"><h2>I.E.E.</h2></a></li>
-                <li><a href="#" class="selected project" id="conciertocentenario"><h1>Concierto Centenario</h1></a></li>
-                <li><a href="massexys.html" class="project" id="massexys"><h2>Más Sexys</h2></a></li>
-                <li><a href="furiaoro.html" class="project" id="furiaoro"><h2>Furia Oro</h2></a></li>
-              </ul>
-            </div>
-            <div class="buttons next">></div>
-          </div>   
-        </hgroup>
       </header>
       <section>
         <div id="content">
+          <h1 class="tagline t_top">
+            Concierto más cerca del cielo 
+          </h1>
           <div id="texto_conciertocentenario" class="text_project">
             <div id="showcase_conciertocentenario" class="showcase">
               <div class="yoxview">

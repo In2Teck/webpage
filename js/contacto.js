@@ -16,11 +16,10 @@ function init(){
   $("#in2teck_main").click(function(){
     redirectPage("index.html");
   });
-  $("#apps_hacks").click(function(){
-    redirectPage("calchupadora.html");
-  });
 
   $("#send_mail").click(sendMail);
+
+  fixMenu();
 }
 
 function sendMail(){

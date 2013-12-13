@@ -57,7 +57,7 @@ function init(){
   $(window).resize(function() {
       delay(function() {
           var width = $(window).width();
-          if( width <= 700 ) {
+          if( width <= 690 ) {
             stretch = {
               //"background-color": "#EFEFEF",
               height: "auto",
@@ -68,7 +68,7 @@ function init(){
             }
             unstretch = {
               //"background-color": "#FFFFFF",
-              height: "13em",
+              height: "10em",
               margin: "0 auto",
               padding: "0",
               "text-align": "center",
@@ -81,7 +81,7 @@ function init(){
             }
             newsDisplay = {
               height: "18.2em",
-              margin: "4em 1em",
+              margin: "3em auto",
               opacity: 1,
               width: "14.5em"
             }
@@ -114,8 +114,7 @@ function init(){
                 opacity: 1,
                 width: "32em"
               }
-            } 
-            
+            }
             newsDisplay = {
               height: "18.2em",
               margin: "4em 1em",
@@ -138,33 +137,9 @@ function init(){
 
   $("#quienes_somos").click(muestraTexto);
   $("#in2teck_main").click(muestraVideo);
-  $("#apps_hacks").click(function(){
-    redirectPage("calchupadora.html");
-  });
   $("#contacto").click(function(){
     redirectPage("contacto.html");
-  });
+  }); 
 
-  //Hide SubLevel Menus
-	$('#header ul li ul').hide();
-
-	//MENU OnHover Show SubLevel Menus
-	$('#header ul li').hover(
-		//OnHover
-		function(){
-			//Hide Other Menus
-			$('#header ul li').not($('ul', this)).stop();
-
-			// Show Hoved Menu
-			$('ul', this).slideDown();
-		},
-		//OnOut
-		function(){
-			// Hide Other Menus
-			$('ul', this).slideUp();
-
-			//Remove the Arrow
-			$('ul li.arrow', this).remove();
-		}
-	);
+  fixMenu();
 }

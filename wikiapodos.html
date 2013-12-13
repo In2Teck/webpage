@@ -3,18 +3,19 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-    <title>Contacto</title>
-    <meta name="description" content="Contacto de In2Teck para cotizaciones, preguntas y comentarios." />
+    <title>Wikiapodos</title>
+    <meta name="description" content="Aplicación web y web móvil con PHP y Javascript en Facebook para T2O y José Cuervo Especial" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     <link rel="stylesheet" href="css/normalize.min.css" />
-    <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="css/apps_hacks.css">
     <link rel="stylesheet" href="css/menu.css">
     <script src="js/jquery.min.js"></script>
 	  <script src="js/prefixfree.min.js"></script>
     <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <script src="js/yoxview/yoxview-init.js"></script>
     <script src="js/froogaloop.min.js"></script>
     <script src="js/util.js"></script>
-    <script src="js/contacto.js"></script>
+    <script src="js/apps_hacks.js"></script>
   </head>
     <body>
       <header>
@@ -25,9 +26,9 @@
           <nav id="header">
 		        <ul>
   	  		    <li><a href="index.html?quienes" class="nav_menu" id="quienes_somos">Nosotros</a></li>
-  	  	  	  <li><a href="#" class="nav_menu" id="apps_hacks">Portafolio</a>
+  	  	  	  <li><a href="#" class="nav_menu selected" id="apps_hacks">Portafolio</a>
                 <ul>
-                  <li><a class="left" href="werun.html">Corre por tu barrio</a><a class="right" href="wikiapodos.html">Wikiapodos</a></li>
+                  <li><a class="left" href="werun.html">Corre por tu barrio</a><a class="right sub_selected" href="wikiapodos.html">Wikiapodos</a></li>
                   <li><a class="left" href="calchupadora.html">Calchupadora</a><a class="right" href="cetesdirecto.html">CETESDirecto</a></li>
                   <li><a class="left" href="gdltradicional.html">GDLTradicional</a><a class="right" href="chutapoints.html">Chutapoints</a></li>
                   <li><a class="left" href="memegenerator.html">Memegenerator</a><a class="right" href="iee.html">I.E.E.</a></li>
@@ -35,7 +36,7 @@
                   <li><a class="left" href="furiaoro.html">Furia Oro</a><a class="right" href="speedBee.html">SpeedBEE</a></li>
                 </ul>
               </li>
-        			<li><a href="#" class="nav_menu selected" id="contacto">Contacto</a></li>
+        			<li><a href="contacto.html" class="nav_menu" id="contacto">Contacto</a></li>
         		</ul>    
           </nav>
         </div>
@@ -52,36 +53,30 @@
       <section>
         <div id="content">
           <h1 class="tagline t_top">
-            ¿Tienes alguna pregunta? ¡Escríbenos!
+            Wikiapodos
           </h1>
-          <div id="formulario">
-            <div class="label">
-              <label for="form_nombre">Nombre</label>
+          <div id="texto_wikiapodos" class="text_project">
+            <div id="showcase_wikiapodos" class="showcase">
+              <div class="yoxview">
+                <a href="img/apps/wikiapodos/wikiapodos_principal.jpg"/><img src="img/apps/wikiapodos/wikiapodos_t_principal.jpg" alt="Principal" title="Principal" class="showcase_img"/></a>
+                <a href="img/apps/wikiapodos/wikiapodos_vista_movil.jpg"/><img src="img/apps/wikiapodos/wikiapodos_t_vista_movil.jpg" alt="Vista movil" title="Vista móvil" class="showcase_img"/></a>
+                <a href="img/apps/wikiapodos/wikiapodos_agrega_apodo.jpg"/><img src="img/apps/wikiapodos/wikiapodos_t_agrega_apodo.jpg" alt="Agrega apodo" title="Agregar apodo" class="showcase_img"/></a>
+                <a href="img/apps/wikiapodos/wikiapodos_apodo_creado.jpg"/><img src="img/apps/wikiapodos/wikiapodos_t_apodo_creado.jpg" alt="Apodo creado" title="Apodo creado" class="showcase_img"/></a>
+              </div><br/>        
+              <a href="http://www.t2omedia.com.mx" target="_blank"><img src="img/clientes/t2omedia.png" class="client_logo" alt="t2omedia" /></a><br/><br/>
             </div>
-            <div class="field">
-              <input id="form_nombre" type="text" size="30" />
+            <div id="details_wikiapodos" class="details">
+              <h3>Descripción</h3></br>
+              <p>Aplicación para crear y asignar apodos para amigos en Facebook.</p><br/>
+              <h3>Objetivo</h3></br>
+              <p>Crear una compilación de apodos a través de una herramienta interactiva.</p><br/>
+              <h3>Resultados</h3>
+              <ul>
+                <li>Más de 2,500 apodos creados</li>
+                <li>Más de 11,000 usuarios apodados</li>
+              </ul>
             </div>
-            <div class="label">
-              <label for="form_email">Email</label>
-            </div>
-            <div class="field">
-              <input id="form_email" type="text" size="30" />
-            </div>
-            <div class="label">
-              <label for="form_asunto">Asunto</label>
-            </div>
-            <div class="text">
-              <textarea id="form_asunto" cols="29"></textarea>
-            </div>
-            <div class="button">
-              <a href="#" id="send_mail">Enviar</a>
-            </div>
-          </div> 
-          <div id="blank_content">
-          </div>
-          <div id="informacion">
-            <p id="phone">+(52 55) 5752 5188 </p>
-            <p id="mail"><a href="mailto:info@in2teck.com">info@in2teck.com</a></p>
+            <p class="info"><a href="#" id="_wikiapodos" class="verdetalles" data-detalles="false">Ver detalles</a></p>
           </div>
         </div>
       </section>
