@@ -6,6 +6,8 @@ var unstretch = { }
 
 var videoDisplay = { }
 
+var newsHide = { }
+
 var newsDisplay = { }
 
 var wrapperWidth = { }
@@ -16,7 +18,7 @@ function muestraTexto() {
   $("#blank_bottom").css("height", "7em");
   $(".tagline").css("opacity", 0);
   $("#video").css({opacity: 0, height: 0, width: 0});
-  $("#news").css({opacity: 0, height: 0, width: 0, margin: "0 0 0.5em 0", display: "none"});
+  $("#news").css(newsHide);
   $("#texto").css({opacity: 1, height: "auto", width: "auto"});
   $("#quienes_somos").addClass("selected");
   $(".t_bottom").css("display", "none");
@@ -84,6 +86,13 @@ function init(){
               width: "14.5em",
               display: "block"
             }
+            newsHide = {
+              opacity: 0,
+              height: 0,
+              width: 0,
+              margin: "0 0 0.5em 0",
+              display: "none"
+            }
           } else {
             stretch = {
               //"background-color": "#EFEFEF",
@@ -118,12 +127,21 @@ function init(){
               height: "18.2em",
               margin: "4em 1em",
               opacity: 1,
-              width: "14.5em"
+              width: "14.5em",
+              display: "inline-block"
+            }
+            newsHide = {
+              opacity: 0,
+              height: 0,
+              width: 0,
+              margin: "0 0 0.5em 0",
+              display: "inline-block"
             }
           }
 
           if($(".tagline").css("opacity") == "0"){
             $("#content").css(stretch);
+            $("#news").css(newsHide);
           }else{
             $("#content").css(unstretch);
             $("#video").css(videoDisplay);
