@@ -62,7 +62,7 @@ function init(){
               //"background-color": "#EFEFEF",
               height: "auto",
               margin: "-3em auto",
-              padding: "1em",
+              padding: "0",
               "text-align": "left",
               width: "auto"
             }
