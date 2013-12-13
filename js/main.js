@@ -16,8 +16,7 @@ function muestraTexto() {
   $("#blank_bottom").css("height", "7em");
   $(".tagline").css("opacity", 0);
   $("#video").css({opacity: 0, height: 0, width: 0});
-  $("#news").css({opacity: 0, height: 0, width: 0, margin: "0 0 0.5em 0"});
-  $("#news_content").css("display", "none");
+  $("#news").css({opacity: 0, height: 0, width: 0, margin: "0 0 0.5em 0", display: "none"});
   $("#texto").css({opacity: 1, height: "auto", width: "auto"});
   $("#quienes_somos").addClass("selected");
   $(".t_bottom").css("display", "none");
@@ -30,7 +29,6 @@ function muestraVideo() {
   $(".tagline").css("opacity", 1);
   $("#video").css(videoDisplay);
   $("#news").css(newsDisplay);
-  $("#news_content").css("display", "block");
   $("#texto").css({opacity: 0, height: 0, width: 0});
   $(".nav_menu").removeClass("selected");
   $(".t_bottom").css("display", "block");
@@ -83,7 +81,8 @@ function init(){
               height: "18.2em",
               margin: "3em auto",
               opacity: 1,
-              width: "14.5em"
+              width: "14.5em",
+              display: "block"
             }
           } else {
             stretch = {
