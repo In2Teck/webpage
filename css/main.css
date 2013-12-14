@@ -183,6 +183,8 @@ section{
    background-color: #EFEFEF;
    width: 51.5em; 
    margin: auto;
+   height: 26.2em;
+   padding-bottom: 0.5em;
 }
 
 @media screen and (max-width:830px) {
@@ -193,6 +195,7 @@ section{
 
   #wrapper {
     width: 42em;
+    height: 29em;
   }
 
   #video {
@@ -301,7 +304,7 @@ section{
 
   #wrapper {
     width: 95%;
-    height: 50em;
+    height: auto;
   }
 
   #news {

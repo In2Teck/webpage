@@ -10,6 +10,8 @@ var newsHide = { }
 
 var newsDisplay = { }
 
+var wrapperHeight = { }
+
 var wrapperWidth = { }
 
 var iframe, player = null;
@@ -22,6 +24,7 @@ function muestraTexto() {
   $("#texto").css({opacity: 1, height: "auto", width: "auto"});
   $("#quienes_somos").addClass("selected");
   $(".t_bottom").css("display", "none");
+  $("#wrapper").css(wrapperHeight);
   $("#content").css(stretch);
   player.api("pause");
 }
@@ -34,6 +37,7 @@ function muestraVideo() {
   $("#texto").css({opacity: 0, height: 0, width: 0});
   $(".nav_menu").removeClass("selected");
   $(".t_bottom").css("display", "block");
+  $("#wrapper").css({height: "auto"});
   $("#content").css(unstretch);
 }
 
@@ -62,7 +66,7 @@ function init(){
               //"background-color": "#EFEFEF",
               height: "auto",
               margin: "-3em auto",
-              padding: "0",
+              padding: "0 0 1em 0",
               "text-align": "left",
               width: "auto"
             }
@@ -93,6 +97,9 @@ function init(){
               margin: "0 0 0.5em 0",
               display: "none"
             }
+            wrapperHeight = {
+              height: "auto"
+            }
           } else {
             stretch = {
               //"background-color": "#EFEFEF",
@@ -116,13 +123,19 @@ function init(){
                 opacity: 1,
                 width: "22em"
               }
+              wrapperHeight = {
+                height: "29em"
+              }
             } else {
               videoDisplay = {
                 height: "18em",
                 opacity: 1,
                 width: "32em"
+              } 
+              wrapperHeight = {
+                height: "26.2em"
               }
-            }
+            } 
             newsDisplay = {
               height: "18.2em",
               margin: "4em 1em",
@@ -135,17 +148,19 @@ function init(){
               height: 0,
               width: 0,
               margin: "0 0 0.5em 0",
-              display: "inline-block"
+              display: "none"
             }
           }
 
           if($(".tagline").css("opacity") == "0"){
             $("#content").css(stretch);
             $("#news").css(newsHide);
+            $("#wrapper").css(wrapperHeight);
           }else{
             $("#content").css(unstretch);
             $("#video").css(videoDisplay);
             $("#news").css(newsDisplay);
+            $("#wrapper").css({height: "auto"});
           }
 
       }, pause );
