@@ -34,7 +34,7 @@ function fixMenu(){
 
 	//MENU OnHover Show SubLevel Menus
 	$('#header ul li').click(
-		function(){
+		function(event){
       if (event.target.id == 'apps_hacks') {
         if (_show) {
 	  	  	// Show Hoved Menu
@@ -50,7 +50,7 @@ function fixMenu(){
 	);
 
   $(document).click(
-    function(){
+    function(event){
       if(!_show && event.target.id != 'apps_hacks'){
         $('#header ul li ul', this).slideUp();
         $("#apps_hacks").removeClass('submenu_selected'); 
